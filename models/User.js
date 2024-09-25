@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
-const Role = require('./Role');
+const Role = require('./role');
 const Permission = require('./Permission');
 
 const User = sequelize.define('User', {
@@ -18,7 +18,7 @@ const User = sequelize.define('User', {
     allowNull: false,                                                   
   },
 });
-                                                                                        
+
 User.belongsTo(Role);
 User.hasOne(Permission);
 
