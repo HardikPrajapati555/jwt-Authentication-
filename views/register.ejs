@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href=
+    "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" 
+              rel="stylesheet">
+              <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+ 
+    <!-- <body class="bg-[url('https://media.istockphoto.com/id/1977175388/photo/cyber-security-and-security-password-login-online-concept-hands-typing-and-entering-username.webp?a=1&b=1&s=612x612&w=0&k=20&c=-68KA4gBhSOrJM1buIaRvavu3expCXnCmvOdqy30JUQ=')] bg-cover bg-center min-h-screen flex items-center justify-center"> -->
+        <body class="bg-[url('https://your-image-url.com/image.jpg')] bg-cover bg-center min-h-screen flex items-center justify-center">
+
+            <!-- Registration Form -->
+            <form method="POST" action="/register" class="w-full sm:w-11/12 md:w-9/12 lg:w-7/12 xl:w-6/12 mx-auto p-6 bg-white shadow-md rounded-lg">
+          
+              <!-- Member Name -->
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2">Member Name:</label>
+                <input type="text" name="name" required class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300" />
+              </div>
+          
+              <!-- Member Email -->
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2">Member Email:</label>
+                <input type="email" name="email" required class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300" />
+              </div>
+          
+              <!-- Select Role -->
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2">Select Role:</label>
+                <select name="role" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300">
+                  <option value="Editor">Editor</option>
+                  <option value="Viewer">Viewer</option>
+                  <option value="Admin">Admin</option>
+                </select>
+              </div>
+          
+              <!-- Login Password -->
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2">Login Password:</label>
+                <input type="password" name="password" required class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300" />
+              </div>
+          
+              <!-- Permissions Table (Responsive for Mobile) -->
+              <div class="overflow-x-auto mb-6">
+                <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-md">
+                  <thead>
+                    <tr class="bg-gray-100 text-gray-700">
+                      <th class="px-4 py-2">Permissions</th>
+                      <th class="px-4 py-2">Create</th>
+                      <th class="px-4 py-2">View</th>
+                      <th class="px-4 py-2">Update</th>
+                      <th class="px-4 py-2">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-gray-700">
+                    <tr class="border-t">
+                      <td class="px-4 py-2">Screen</td>
+                      <td class="px-4 py-2 text-center"><input type="checkbox" name="permissions[screen_create]" /></td>
+                      <td class="px-4 py-2 text-center"><input type="checkbox" name="permissions[screen_view]" /></td>
+                      <td class="px-4 py-2 text-center"><input type="checkbox" name="permissions[screen_update]" /></td>
+                      <td class="px-4 py-2 text-center"><input type="checkbox" name="permissions[screen_delete]" /></td>
+                    </tr>
+                    <tr class="border-t">
+                      <td class="px-4 py-2">Playlist</td>
+                      <td class="px-4 py-2 text-center"><input type="checkbox" name="permissions[playlist_create]" /></td>
+                      <td class="px-4 py-2 text-center"><input type="checkbox" name="permissions[playlist_view]" /></td>
+                      <td class="px-4 py-2 text-center"><input type="checkbox" name="permissions[playlist_update]" /></td>
+                      <td class="px-4 py-2 text-center"><input type="checkbox" name="permissions[playlist_delete]" /></td>
+                    </tr>
+                    <tr class="border-t">
+                      <td class="px-4 py-2">Library</td>
+                      <td class="px-4 py-2 text-center"><input type="checkbox" name="permissions[library_create]" /></td>
+                      <td class="px-4 py-2 text-center"><input type="checkbox" name="permissions[library_view]" /></td>
+                      <td class="px-4 py-2 text-center"><input type="checkbox" name="permissions[library_update]" /></td>
+                      <td class="px-4 py-2 text-center"><input type="checkbox" name="permissions[library_delete]" /></td>
+                    </tr>
+                    <tr class="border-t">
+                      <td class="px-4 py-2">Reports</td>
+                      <td class="px-4 py-2 text-center"><input type="checkbox" name="permissions[reports_create]" /></td>
+                      <td class="px-4 py-2 text-center"><input type="checkbox" name="permissions[reports_view]" /></td>
+                      <td class="px-4 py-2 text-center"><input type="checkbox" name="permissions[reports_update]" /></td>
+                      <td class="px-4 py-2 text-center"><input type="checkbox" name="permissions[reports_delete]" /></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          
+              <!-- Submit Button -->
+              <div class="flex justify-between items-center">
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring">Add Member</button>
+                <a href="/login" class="text-blue-500 hover:underline">Already have an account? Login</a>
+              </div>
+          
+            </form>
+          
+</body>
+</html>
