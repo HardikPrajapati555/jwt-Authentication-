@@ -16,7 +16,7 @@ const register = async (req, res) => {
   const newPermission = await Permission.create(permissions);
   await newUser.setPermission(newPermission);
 
-  res.redirect('/login');
+  res.redirect('/');
 };
 const login = async (req, res) => {
     const { email, password } = req.body;
